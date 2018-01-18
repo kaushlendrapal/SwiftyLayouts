@@ -10,8 +10,8 @@ project ‘SwiftyLayoutsExample’, {
 
 def applibs
 
-pod ‘MyDevLibrary-Debug', :configuration => ['Debug'], :path  => 'SwiftyLayoutsExample/Frameworks/MyDevLibrary/Debug/MyDevLibrary-Debug.podspec'
-pod 'MyDevLibrary-Release', :configuration => ['Release'], :path  => 'SwiftyLayoutsExample/Frameworks/MyDevLibrary/Release/MyDevLibrary-Release.podspec'
+pod ‘SwiftyLayouts-Debug', :configuration => ['Debug'], :path  => '../SwiftyLayouts'
+# pod 'MyDevLibrary-Release', :configuration => ['Release'], :path  => 'SwiftyLayoutsExample/Frameworks/MyDevLibrary/Release/MyDevLibrary-Release.podspec'
 
 end
 
