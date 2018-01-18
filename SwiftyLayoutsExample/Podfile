@@ -1,0 +1,44 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+# deployment target, i.e. lowest supported version
+use_frameworks!
+
+project ‘SwiftyLayoutsExample’, {
+'Debug' => :debug,
+'Release' => :release,
+}
+
+def applibs
+
+pod ‘MyDevLibrary-Debug', :configuration => ['Debug'], :path  => 'SwiftyLayoutsExample/Frameworks/MyDevLibrary/Debug/MyDevLibrary-Debug.podspec'
+pod 'MyDevLibrary-Release', :configuration => ['Release'], :path  => 'SwiftyLayoutsExample/Frameworks/MyDevLibrary/Release/MyDevLibrary-Release.podspec'
+
+end
+
+target 'SwiftyLayoutsExample' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+    platform :ios, '10.0'
+    workspace 'SwiftyLayoutsExample.xcworkspace'
+    project 'SwiftyLayoutsExample.xcodeproj'
+    applibs
+    pod 'Alamofire', '~> 4.5'
+#   pod 'CocoaLumberjack', '~> 2.3.0'
+# pod 'LaunchDarkly', '~> 2.1.1'
+  # Pods for SwiftyLayoutsExample
+
+  target 'SwiftyLayoutsExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+post_install do | installer |
+require 'fileutils'
+target 'SwiftyLayoutsExample' do
+FileUtils.cp_r('Pods/Target Support Files/Pods-SwiftyLayoutsExample/Pods-SwiftyLayoutsExample-Acknowledgements.plist', 'Pods-acknowledgements.plist', :remove_destination => true)
+end
+end
+
