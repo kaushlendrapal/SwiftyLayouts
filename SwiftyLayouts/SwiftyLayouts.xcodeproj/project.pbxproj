@@ -10,6 +10,7 @@
 		E1415CE5200F617100651407 /* SwiftyLayouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1415CDB200F617100651407 /* SwiftyLayouts.framework */; };
 		E1415CEA200F617100651407 /* SwiftyLayoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1415CE9200F617100651407 /* SwiftyLayoutsTests.swift */; };
 		E1415CEC200F617100651407 /* SwiftyLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = E1415CDE200F617100651407 /* SwiftyLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E16F1E122011D27B004ABEFE /* WeeklyViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,9 @@
 		E1415CE4200F617100651407 /* SwiftyLayoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyLayoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1415CE9200F617100651407 /* SwiftyLayoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyLayoutsTests.swift; sourceTree = "<group>"; };
 		E1415CEB200F617100651407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E16F1E0D2011C1E8004ABEFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E16F1E0F2011C1F0004ABEFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 				E1415CDD200F617100651407 /* SwiftyLayouts */,
 				E1415CE8200F617100651407 /* SwiftyLayoutsTests */,
 				E1415CDC200F617100651407 /* Products */,
+				E16F1E0C2011C1E8004ABEFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E1415CDE200F617100651407 /* SwiftyLayouts.h */,
+				E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */,
 				E1415CDF200F617100651407 /* Info.plist */,
 			);
 			path = SwiftyLayouts;
@@ -84,6 +90,15 @@
 				E1415CEB200F617100651407 /* Info.plist */,
 			);
 			path = SwiftyLayoutsTests;
+			sourceTree = "<group>";
+		};
+		E16F1E0C2011C1E8004ABEFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E16F1E0F2011C1F0004ABEFE /* Foundation.framework */,
+				E16F1E0D2011C1E8004ABEFE /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +163,7 @@
 				TargetAttributes = {
 					E1415CDA200F617100651407 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 					E1415CE3200F617100651407 = {
@@ -196,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16F1E122011D27B004ABEFE /* WeeklyViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +351,7 @@
 		E1415CF0200F617100651407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -348,6 +366,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,6 +375,7 @@
 		E1415CF1200F617100651407 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -378,6 +398,7 @@
 		E1415CF3200F617100651407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftyLayoutsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -391,6 +412,7 @@
 		E1415CF4200F617100651407 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftyLayoutsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

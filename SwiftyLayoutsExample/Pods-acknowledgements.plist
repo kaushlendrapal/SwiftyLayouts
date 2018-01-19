@@ -248,7 +248,7 @@ THE SOFTWARE.
 			<key>License</key>
 			<string>Apache License</string>
 			<key>Title</key>
-			<string>SwiftyLayouts-Debug</string>
+			<string>SwiftyLayouts</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

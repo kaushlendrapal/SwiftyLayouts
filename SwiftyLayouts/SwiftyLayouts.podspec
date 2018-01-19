@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "SwiftyLayouts-Debug"
+  s.name         = "SwiftyLayouts"
   s.version      = "1.0.0"
   s.summary      = "SwiftyLayouts-Debug. library for iOS"
 
@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+   s.platform     = :ios
+   s.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :path => ".", :tag => "#{s.version}" }
-
+#  s.source       = { :path => "FrameWorks/debug/", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.{h,m,swift}"
+# s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "SwiftyLayouts/**/*.h"
@@ -106,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
+  s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -131,6 +132,7 @@ s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"

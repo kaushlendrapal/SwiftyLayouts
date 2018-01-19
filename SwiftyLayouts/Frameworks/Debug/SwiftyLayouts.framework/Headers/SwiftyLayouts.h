@@ -16,9 +16,5 @@ FOUNDATION_EXPORT const unsigned char SwiftyLayoutsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftyLayouts/PublicHeader.h>
 
+//#import <SwiftyLayouts/Weekly>
 
-public class SwiftyLayouts {
-    public class func logToConsole(msg: String) {
-        print(msg);
-    }
-}

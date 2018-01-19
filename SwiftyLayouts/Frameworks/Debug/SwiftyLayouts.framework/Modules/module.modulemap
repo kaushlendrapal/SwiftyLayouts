@@ -4,3 +4,8 @@ framework module SwiftyLayouts {
   export *
   module * { export * }
 }
+
+module SwiftyLayouts.Swift {
+    header "SwiftyLayouts-Swift.h"
+    requires objc
+}

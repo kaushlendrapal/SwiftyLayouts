@@ -1,0 +1,6 @@
+framework module SwiftyLayouts {
+  umbrella header "SwiftyLayouts-umbrella.h"
+
+  export *
+  module * { export * }
+}
