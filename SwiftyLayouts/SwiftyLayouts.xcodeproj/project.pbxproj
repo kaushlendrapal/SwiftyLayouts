@@ -11,6 +11,8 @@
 		E1415CEA200F617100651407 /* SwiftyLayoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1415CE9200F617100651407 /* SwiftyLayoutsTests.swift */; };
 		E1415CEC200F617100651407 /* SwiftyLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = E1415CDE200F617100651407 /* SwiftyLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E16F1E122011D27B004ABEFE /* WeeklyViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */; };
+		E16F1E1420120782004ABEFE /* CardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F1E1320120782004ABEFE /* CardViewLayout.swift */; };
+		E16F1E1620120D30004ABEFE /* LayoutSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F1E1520120D30004ABEFE /* LayoutSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		E16F1E0D2011C1E8004ABEFE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E16F1E0F2011C1F0004ABEFE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyViewLayout.swift; sourceTree = "<group>"; };
+		E16F1E1320120782004ABEFE /* CardViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewLayout.swift; sourceTree = "<group>"; };
+		E16F1E1520120D30004ABEFE /* LayoutSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				E1415CDE200F617100651407 /* SwiftyLayouts.h */,
 				E16F1E112011D27B004ABEFE /* WeeklyViewLayout.swift */,
 				E1415CDF200F617100651407 /* Info.plist */,
+				E16F1E1320120782004ABEFE /* CardViewLayout.swift */,
+				E16F1E1520120D30004ABEFE /* LayoutSetting.swift */,
 			);
 			path = SwiftyLayouts;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16F1E1420120782004ABEFE /* CardViewLayout.swift in Sources */,
+				E16F1E1620120D30004ABEFE /* LayoutSetting.swift in Sources */,
 				E16F1E122011D27B004ABEFE /* WeeklyViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
