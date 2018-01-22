@@ -12,7 +12,7 @@ public struct LayoutSetting {
     
     var contentMargin:UIEdgeInsets
     var sectionMargin:UIEdgeInsets
-    var cellMargin:UIEdgeInsets
+    var cellMargin:UIEdgeInsets    
     
     init() {
         self.contentMargin = UIEdgeInsets.zero
