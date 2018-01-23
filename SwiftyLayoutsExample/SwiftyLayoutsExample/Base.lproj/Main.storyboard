@@ -82,33 +82,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-jT-JvT">
-                                <rect key="frame" x="76" y="44" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-jT-JvT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CKt-G5-2ke">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CKt-G5-2ke" customClass="CardViewLayout" customModule="SwiftyLayouts">
+                                    <size key="itemSize" width="350" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0nQ-Uh-Wn2">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LayoutCollectionViewCell" id="0nQ-Uh-Wn2" customClass="LayoutCollectionViewCell" customModule="SwiftyLayoutsExample" customModuleProvider="target">
+                                        <rect key="frame" x="12.5" y="0.0" width="350" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.75986475490000005" green="0.56210087819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CJj-Vd-aWe" firstAttribute="trailing" secondItem="GqV-jT-JvT" secondAttribute="trailing" id="TDr-pX-rPY"/>
+                            <constraint firstItem="GqV-jT-JvT" firstAttribute="leading" secondItem="CJj-Vd-aWe" secondAttribute="leading" id="ucE-Vi-15Z"/>
+                            <constraint firstItem="CJj-Vd-aWe" firstAttribute="bottom" secondItem="GqV-jT-JvT" secondAttribute="bottom" id="wgX-LJ-vo2"/>
+                            <constraint firstItem="GqV-jT-JvT" firstAttribute="top" secondItem="CJj-Vd-aWe" secondAttribute="top" id="xiH-W0-del"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CJj-Vd-aWe"/>
                     </view>
                     <connections>
-                        <outlet property="cardCollectionView" destination="GqV-jT-JvT" id="f7N-ww-IWL"/>
+                        <outlet property="collectionView" destination="GqV-jT-JvT" id="Rrd-aj-5DX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHD-aX-MSj" userLabel="First Responder" sceneMemberID="firstResponder"/>

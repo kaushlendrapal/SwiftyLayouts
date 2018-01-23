@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import SwiftyLayouts
 
-class CardViewController: UIViewController {
+fileprivate struct RegisteredCellClassIdentifier {
+    static let layoutCollectionViewCell:String = "LayoutCollectionViewCell"
+}
+
+class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, LayoutDelegate  {
     
-    @IBOutlet weak var cardCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     var viewModel: String!
+    
+    var customLayout:CardViewLayout? {
+        return collectionView.collectionViewLayout as? CardViewLayout
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("dependency value for viewModel \(viewModel)")
         // Do any additional setup after loading the view.
+        setUpView()
+        collectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,18 +44,43 @@ class CardViewController: UIViewController {
     }
     
     func setUpView() -> Void {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        customLayout?.delegate = self
+    }
+}
+
+extension CardViewController {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var layoutCell:LayoutCollectionViewCell!
+        layoutCell = collectionView.dequeueReusableCell(withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewCell, for: indexPath) as! LayoutCollectionViewCell
+        // Configure the cell
         
+        return layoutCell
     }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension CardViewController {
+    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+        return 100
     }
-    */
+}
+
+private extension CardViewController {
+    func setupCollectionViewLayout() {
+        guard let collectionView = collectionView, let customLayout = customLayout else { return }
+        // register for layout elements
+}
 
 }
 

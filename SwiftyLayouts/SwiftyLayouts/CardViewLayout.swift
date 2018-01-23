@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LayoutDelegate : class {
+public protocol LayoutDelegate : class {
     func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat
 }
 
@@ -27,7 +27,7 @@ public class CardViewLayout: UICollectionViewLayout {
 
     private var collectionViewContentHeight: CGFloat = 0
     public var layoutSetting = LayoutSetting()
-    weak var delegate: LayoutDelegate!
+    public weak var delegate: LayoutDelegate!
 
     private var collectionViewContentWidth: CGFloat {
         guard let collectionView = collectionView else {
