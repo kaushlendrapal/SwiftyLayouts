@@ -15,6 +15,7 @@
 		E1415D4D200F65E800651407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1415D4C200F65E800651407 /* Assets.xcassets */; };
 		E1415D50200F65E800651407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1415D4E200F65E800651407 /* LaunchScreen.storyboard */; };
 		E1415D5B200F65E800651407 /* SwiftyLayoutsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1415D5A200F65E800651407 /* SwiftyLayoutsExampleTests.swift */; };
+		E157DD282017125C008A7BAD /* LayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E157DD272017125C008A7BAD /* LayoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E1415D56200F65E800651407 /* SwiftyLayoutsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyLayoutsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1415D5A200F65E800651407 /* SwiftyLayoutsExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyLayoutsExampleTests.swift; sourceTree = "<group>"; };
 		E1415D5C200F65E800651407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E157DD272017125C008A7BAD /* LayoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E1415D4C200F65E800651407 /* Assets.xcassets */,
 				E1415D4E200F65E800651407 /* LaunchScreen.storyboard */,
 				E1415D51200F65E800651407 /* Info.plist */,
+				E157DD272017125C008A7BAD /* LayoutTableViewCell.swift */,
 			);
 			path = SwiftyLayoutsExample;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				E1415D48200F65E800651407 /* ViewController.swift in Sources */,
 				E1415D46200F65E800651407 /* AppDelegate.swift in Sources */,
+				E157DD282017125C008A7BAD /* LayoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
