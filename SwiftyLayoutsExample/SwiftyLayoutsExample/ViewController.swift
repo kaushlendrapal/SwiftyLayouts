@@ -63,8 +63,9 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let collectionDatasource:[Feature] = CardViewController.mock_collectionDatasource_fromFeatureModel()
         
-        let cardViewController = CardViewControllerDependecy.cardViewController(identifier:"CardViewController", dependency: "testing dependency").instantiateCardViewController()
+        let cardViewController = CardViewControllerDependecy.cardViewController(identifier:"CardViewController", dependency: collectionDatasource).instantiateCardViewController()
         self.navigationController?.pushViewController(cardViewController, animated: true)
     }
     
