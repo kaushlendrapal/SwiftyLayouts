@@ -92,6 +92,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E128300B2018652A0058329F /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
 		E1415D39200F65E800651407 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +122,7 @@
 		E1415D44200F65E800651407 /* SwiftyLayoutsExample */ = {
 			isa = PBXGroup;
 			children = (
+				E128300B2018652A0058329F /* MockData */,
 				E1415D45200F65E800651407 /* AppDelegate.swift */,
 				E1415D47200F65E800651407 /* ViewController.swift */,
 				E1415D49200F65E800651407 /* Main.storyboard */,

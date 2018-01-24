@@ -25,6 +25,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupCollectionViewLayout()
         setUpView()
         collectionView.reloadData()
     }
@@ -47,6 +48,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
         customLayout?.delegate = self
+        
     }
 }
 
@@ -58,7 +60,7 @@ extension CardViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,7 +74,11 @@ extension CardViewController {
 
 extension CardViewController {
     func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-        return 100
+        if (indexPath.row % 2) == 0 {
+            return 50
+        } else {
+            return 100
+        }
     }
 }
 
@@ -80,8 +86,10 @@ private extension CardViewController {
     func setupCollectionViewLayout() {
         guard let collectionView = collectionView, let customLayout = customLayout else { return }
         // register for layout elements
-}
-
+        var layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(2, 10, 2, 10))
+        layoutSetting.updateCellMargin(cellMargin: UIEdgeInsetsMake(5, 10, 5, 10))
+        customLayout.layoutSetting = layoutSetting
+    }
 }
 
 enum CardViewControllerDependecy {
