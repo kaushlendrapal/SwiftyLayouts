@@ -23,7 +23,7 @@ target 'SwiftyLayoutsExample' do
     workspace 'SwiftyLayoutsExample.xcworkspace'
     project 'SwiftyLayoutsExample.xcodeproj'
     applibs
-    pod 'Alamofire', '~> 4.5'
+#    pod 'Alamofire', '~> 4.5'
 #   pod 'CocoaLumberjack', '~> 2.3.0'
 # pod 'LaunchDarkly', '~> 2.1.1'
   # Pods for SwiftyLayoutsExample
