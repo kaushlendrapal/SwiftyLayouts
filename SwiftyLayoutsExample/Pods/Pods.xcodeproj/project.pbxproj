@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0AD723B26A1776601EFA0678290145E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		130E45A1E2FFE112D5074A8DE3A93AD6 /* SwiftyLayouts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82666F3061CB0D82A43202A8C1644E97 /* SwiftyLayouts-dummy.m */; };
+		130E45A1E2FFE112D5074A8DE3A93AD6 /* SwiftyLayouts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78734A2C9C99B3397F585C8BBF225B18 /* SwiftyLayouts-dummy.m */; };
+		2B5442265CE4DFA72375D9E70B076C1E /* barButtonItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D42EFFD3B22FB4F9326578EB2303CB /* barButtonItem@2x.png */; };
+		4C6EA592C529084F3E86CFA855446B46 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 351B2399CD8C39EB3B0C06F270EC19CE /* default.png */; };
+		4D6A949632EF0AD0F56578FC8A9CDB1C /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43658BF5FC60AAFF7166B640B701545D /* default@2x.png */; };
 		5A97BB11B2ECE019C4E9BBE1150CC00A /* Pods-SwiftyLayoutsExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5475FB9D0CB98C8EDB522445FF93501 /* Pods-SwiftyLayoutsExampleTests-dummy.m */; };
+		5AC55F4B2633233D70DE56C6683B90D1 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBE085C22DB7BAAECCF314A685E8999 /* logo@2x.png */; };
 		7147C6AA5FE1156BB9A80AE31A7DF6F9 /* Pods-SwiftyLayoutsExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC4358045DEE6F3063990D83DB69D2A /* Pods-SwiftyLayoutsExample-dummy.m */; };
 		71F539BA80581893A8601D8254B8C6AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7592EB537160E3B3790FA611E670FA10 /* SwiftyLayouts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2089166BEC69F378AEBE1ADFDE91BA7E /* SwiftyLayouts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77A97514FC966A239EAF547C921A26A7 /* CardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E873F105A5A75DA926459AEE166D5147 /* CardViewLayout.swift */; };
+		7592EB537160E3B3790FA611E670FA10 /* SwiftyLayouts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36532859CE38E0FE78F3336F7F496A11 /* SwiftyLayouts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77A97514FC966A239EAF547C921A26A7 /* CardViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF15FB631B49D59E0200A72BE79E7AC /* CardViewLayout.swift */; };
 		7B65A51A8ED49CB3B105ECFE80F1C2AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		87C6B41991D6E6AAF0ABE71541E4C556 /* kaushalLinked.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06BF5465A02F484B4D8A0DE9F123CCE4 /* kaushalLinked.jpg */; };
+		7B7E05DB433F6F570F9908F26B9DD495 /* barButtonItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB32B71C4E8B7908F446179B3CAECC4 /* barButtonItem.png */; };
+		84054699FAC34661479C90C06A7A3BA7 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA68D1D9794BB132118EEBFA5B122987 /* logo@3x.png */; };
+		973ACEC905612D2C02B87F4AFABD4A17 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC7245E0E4746C7A4DB0528EB2AD9AD /* logo.png */; };
 		97EC5DBB3E4BAC794BD2C4F4BDE19B23 /* Pods-SwiftyLayoutsExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 506C3A0AD0FEE7EC699DDB97C6B63301 /* Pods-SwiftyLayoutsExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2DA08B13D8B5CA33F024021E1522B /* Pods-SwiftyLayoutsExampleTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 670CBCF7E2164B70E4C31BF96109CDF4 /* Pods-SwiftyLayoutsExampleTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0E1673CE7E7D1C373A3F274544C3F2B /* LayoutSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05588DE6188D31B1476E08AF0FF0F41 /* LayoutSetting.swift */; };
-		ADBB694001A7801BC8BE312D95969EFD /* SwiftyLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = 46675520B090542175CF9F5F888F8CCD /* SwiftyLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FEA7F3B2FF3A2304F375517931F44EB2 /* WeeklyViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96845F34BCF106C7818D66E457E4D12F /* WeeklyViewLayout.swift */; };
+		9DB9D87A16A324745E6D4AFAA3478908 /* default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0870DA9F6B74229CAB52D4C426111EC0 /* default@3x.png */; };
+		A0E1673CE7E7D1C373A3F274544C3F2B /* LayoutSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAD786E0C6842B9E74F7A3963380FBD /* LayoutSetting.swift */; };
+		ADBB694001A7801BC8BE312D95969EFD /* SwiftyLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E530BC251F429A745C7BC93FC4FEE3 /* SwiftyLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B543E4C1D021E5F909C04629CC613546 /* barButtonItem@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17C233638DCE4B0BA20DD777BB2043AD /* barButtonItem@3x.png */; };
+		FEA7F3B2FF3A2304F375517931F44EB2 /* WeeklyViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8DC055F39BD02B235406E2B4669CE /* WeeklyViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,30 +42,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06BF5465A02F484B4D8A0DE9F123CCE4 /* kaushalLinked.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kaushalLinked.jpg; path = SwiftyLayouts/Resources/kaushalLinked.jpg; sourceTree = "<group>"; };
+		0870DA9F6B74229CAB52D4C426111EC0 /* default@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "default@3x.png"; path = "SwiftyLayouts/Resources/default@3x.png"; sourceTree = "<group>"; };
 		088159E5926193E369681394AF55B5EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1409362B06FAEF7793096E001B68B5CB /* SwiftyLayouts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyLayouts-prefix.pch"; sourceTree = "<group>"; };
 		14E89BA5D8FC4B30F3EDDD94E3BE5616 /* SwiftyLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyLayouts.framework; path = SwiftyLayouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		165E498E708FD50DD499C7C35E5464DE /* Pods_SwiftyLayoutsExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyLayoutsExampleTests.framework; path = "Pods-SwiftyLayoutsExampleTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C233638DCE4B0BA20DD777BB2043AD /* barButtonItem@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "barButtonItem@3x.png"; path = "SwiftyLayouts/Resources/barButtonItem@3x.png"; sourceTree = "<group>"; };
 		17F9F9768E0502A068543F4FE742DDDE /* Pods-SwiftyLayoutsExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyLayoutsExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		1993AEF4AE2B30C0CB0D6FE6CBAC4235 /* Pods-SwiftyLayoutsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyLayoutsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		1EDB88B66871A11417A2011C4614C65F /* Pods-SwiftyLayoutsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyLayoutsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		2089166BEC69F378AEBE1ADFDE91BA7E /* SwiftyLayouts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyLayouts-umbrella.h"; sourceTree = "<group>"; };
 		2EC4358045DEE6F3063990D83DB69D2A /* Pods-SwiftyLayoutsExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyLayoutsExample-dummy.m"; sourceTree = "<group>"; };
+		2FBE085C22DB7BAAECCF314A685E8999 /* logo@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@2x.png"; path = "SwiftyLayouts/Resources/logo@2x.png"; sourceTree = "<group>"; };
+		351B2399CD8C39EB3B0C06F270EC19CE /* default.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = default.png; path = SwiftyLayouts/Resources/default.png; sourceTree = "<group>"; };
+		36532859CE38E0FE78F3336F7F496A11 /* SwiftyLayouts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyLayouts-umbrella.h"; sourceTree = "<group>"; };
+		3A9A50E4941D69EE7FE34B5985A6F8B3 /* SwiftyLayouts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyLayouts-prefix.pch"; sourceTree = "<group>"; };
 		3B0756B35CF6B08DFB06E80514A08969 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46675520B090542175CF9F5F888F8CCD /* SwiftyLayouts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyLayouts.h; path = SwiftyLayouts/SwiftyLayouts.h; sourceTree = "<group>"; };
+		43658BF5FC60AAFF7166B640B701545D /* default@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "default@2x.png"; path = "SwiftyLayouts/Resources/default@2x.png"; sourceTree = "<group>"; };
 		481A53F41745A81C9E08F322D23F4EFC /* Pods_SwiftyLayoutsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyLayoutsExample.framework; path = "Pods-SwiftyLayoutsExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD90B190DA7A410719A6AF0271B76FF /* SwiftyLayouts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyLayouts.xcconfig; sourceTree = "<group>"; };
 		506C3A0AD0FEE7EC699DDB97C6B63301 /* Pods-SwiftyLayoutsExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyLayoutsExample-umbrella.h"; sourceTree = "<group>"; };
 		53D54DC6CD967822A1794B3BE05CE54B /* Pods-SwiftyLayoutsExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyLayoutsExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		57CC9843BF263540FE873646BF4CD357 /* SwiftyLayouts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyLayouts.xcconfig; sourceTree = "<group>"; };
+		5B530D6A98F830B1E35F02C477174A6B /* SwiftyLayouts.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwiftyLayouts.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5C1E2EEA10A6550FD8712AAB7BA28C26 /* Pods-SwiftyLayoutsExampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyLayoutsExampleTests-resources.sh"; sourceTree = "<group>"; };
+		5DF15FB631B49D59E0200A72BE79E7AC /* CardViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardViewLayout.swift; path = SwiftyLayouts/CardViewLayout.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		670CBCF7E2164B70E4C31BF96109CDF4 /* Pods-SwiftyLayoutsExampleTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyLayoutsExampleTests-umbrella.h"; sourceTree = "<group>"; };
+		67A1070B6A690167C9272FEBF3EB0AF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C01A3BB093F7A07036A852506404BE0 /* Pods-SwiftyLayoutsExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftyLayoutsExample.modulemap"; sourceTree = "<group>"; };
-		82666F3061CB0D82A43202A8C1644E97 /* SwiftyLayouts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyLayouts-dummy.m"; sourceTree = "<group>"; };
-		833395D60322E82BF7BCFAA4E1D5D77D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76E530BC251F429A745C7BC93FC4FEE3 /* SwiftyLayouts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyLayouts.h; path = SwiftyLayouts/SwiftyLayouts.h; sourceTree = "<group>"; };
+		78734A2C9C99B3397F585C8BBF225B18 /* SwiftyLayouts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyLayouts-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96845F34BCF106C7818D66E457E4D12F /* WeeklyViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeeklyViewLayout.swift; path = SwiftyLayouts/WeeklyViewLayout.swift; sourceTree = "<group>"; };
+		9A6AED353EF7DCAC79F67176CD256D9B /* SwiftyLayouts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyLayouts.modulemap; sourceTree = "<group>"; };
+		9AB32B71C4E8B7908F446179B3CAECC4 /* barButtonItem.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = barButtonItem.png; path = SwiftyLayouts/Resources/barButtonItem.png; sourceTree = "<group>"; };
 		9C631876DD91AF77FBE981CA16542D16 /* Pods-SwiftyLayoutsExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyLayoutsExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A7F5890D735FF7BBB45FF3DA6DC347A3 /* Pods-SwiftyLayoutsExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyLayoutsExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		B2DF4619D4A36E30438D04C05AD7E0D1 /* Pods-SwiftyLayoutsExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyLayoutsExample-frameworks.sh"; sourceTree = "<group>"; };
@@ -67,9 +82,12 @@
 		C5BB8DA1740387BBC984FB01B48A3B94 /* Pods-SwiftyLayoutsExampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyLayoutsExampleTests-frameworks.sh"; sourceTree = "<group>"; };
 		C65A3AFFB9793581CF374ED83DF0A8E3 /* Pods-SwiftyLayoutsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyLayoutsExample.release.xcconfig"; sourceTree = "<group>"; };
 		C8813ADD5BADC1504B5BBB7C7FBD0C43 /* Pods-SwiftyLayoutsExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyLayoutsExample-resources.sh"; sourceTree = "<group>"; };
-		E05588DE6188D31B1476E08AF0FF0F41 /* LayoutSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSetting.swift; path = SwiftyLayouts/LayoutSetting.swift; sourceTree = "<group>"; };
-		E873F105A5A75DA926459AEE166D5147 /* CardViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CardViewLayout.swift; path = SwiftyLayouts/CardViewLayout.swift; sourceTree = "<group>"; };
-		FEC35358025C8D66FF10ABD593B529FF /* SwiftyLayouts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyLayouts.modulemap; sourceTree = "<group>"; };
+		CAC7245E0E4746C7A4DB0528EB2AD9AD /* logo.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = logo.png; path = SwiftyLayouts/Resources/logo.png; sourceTree = "<group>"; };
+		D1A84FDB9CA82A572894BB847BCEC065 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D9E8DC055F39BD02B235406E2B4669CE /* WeeklyViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeeklyViewLayout.swift; path = SwiftyLayouts/WeeklyViewLayout.swift; sourceTree = "<group>"; };
+		F0D42EFFD3B22FB4F9326578EB2303CB /* barButtonItem@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "barButtonItem@2x.png"; path = "SwiftyLayouts/Resources/barButtonItem@2x.png"; sourceTree = "<group>"; };
+		FA68D1D9794BB132118EEBFA5B122987 /* logo@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "logo@3x.png"; path = "SwiftyLayouts/Resources/logo@3x.png"; sourceTree = "<group>"; };
+		FDAD786E0C6842B9E74F7A3963380FBD /* LayoutSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutSetting.swift; path = SwiftyLayouts/LayoutSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +127,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1AB6AFBCF62988F3DD01CEEC241A7C3C /* Resources */ = {
+		2176A0072D46B547DB74B52DA49E39EE /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				06BF5465A02F484B4D8A0DE9F123CCE4 /* kaushalLinked.jpg */,
+				A5DEBD6EFFD1E0983715C917903D8A2E /* SwiftyLayouts */,
 			);
-			name = Resources;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		6CFAE2CC4D97FA2DE49DA29322557217 /* Pods-SwiftyLayoutsExample */ = {
@@ -139,36 +157,37 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				FAB22C57FACEC52E4D5529BD0341C3CF /* Development Pods */,
+				2176A0072D46B547DB74B52DA49E39EE /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				CF0A92F5980C1F69BB9A53C1AC7B66A9 /* Products */,
 				137F8CB56A094F6840D411B450F3CC90 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		954A63984DB37DCC7B837F48BAB4656E /* SwiftyLayouts */ = {
+		A5DEBD6EFFD1E0983715C917903D8A2E /* SwiftyLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				E873F105A5A75DA926459AEE166D5147 /* CardViewLayout.swift */,
-				E05588DE6188D31B1476E08AF0FF0F41 /* LayoutSetting.swift */,
-				46675520B090542175CF9F5F888F8CCD /* SwiftyLayouts.h */,
-				96845F34BCF106C7818D66E457E4D12F /* WeeklyViewLayout.swift */,
-				1AB6AFBCF62988F3DD01CEEC241A7C3C /* Resources */,
-				A7F7D5F8BD0E8416EF90B150D67E81B7 /* Support Files */,
+				5DF15FB631B49D59E0200A72BE79E7AC /* CardViewLayout.swift */,
+				FDAD786E0C6842B9E74F7A3963380FBD /* LayoutSetting.swift */,
+				76E530BC251F429A745C7BC93FC4FEE3 /* SwiftyLayouts.h */,
+				D9E8DC055F39BD02B235406E2B4669CE /* WeeklyViewLayout.swift */,
+				BD50CF860678214537054F9739635AE5 /* Pod */,
+				DC5DD00F46F022AEC49CA414F3A1B8BC /* Resources */,
+				A6CFE8325CD4A5D05E3834ADD786ACB6 /* Support Files */,
 			);
 			name = SwiftyLayouts;
 			path = ../../SwiftyLayouts;
 			sourceTree = "<group>";
 		};
-		A7F7D5F8BD0E8416EF90B150D67E81B7 /* Support Files */ = {
+		A6CFE8325CD4A5D05E3834ADD786ACB6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				833395D60322E82BF7BCFAA4E1D5D77D /* Info.plist */,
-				FEC35358025C8D66FF10ABD593B529FF /* SwiftyLayouts.modulemap */,
-				57CC9843BF263540FE873646BF4CD357 /* SwiftyLayouts.xcconfig */,
-				82666F3061CB0D82A43202A8C1644E97 /* SwiftyLayouts-dummy.m */,
-				1409362B06FAEF7793096E001B68B5CB /* SwiftyLayouts-prefix.pch */,
-				2089166BEC69F378AEBE1ADFDE91BA7E /* SwiftyLayouts-umbrella.h */,
+				67A1070B6A690167C9272FEBF3EB0AF0 /* Info.plist */,
+				9A6AED353EF7DCAC79F67176CD256D9B /* SwiftyLayouts.modulemap */,
+				4CD90B190DA7A410719A6AF0271B76FF /* SwiftyLayouts.xcconfig */,
+				78734A2C9C99B3397F585C8BBF225B18 /* SwiftyLayouts-dummy.m */,
+				3A9A50E4941D69EE7FE34B5985A6F8B3 /* SwiftyLayouts-prefix.pch */,
+				36532859CE38E0FE78F3336F7F496A11 /* SwiftyLayouts-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../SwiftyLayoutsExample/Pods/Target Support Files/SwiftyLayouts";
@@ -200,6 +219,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD50CF860678214537054F9739635AE5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D1A84FDB9CA82A572894BB847BCEC065 /* LICENSE */,
+				5B530D6A98F830B1E35F02C477174A6B /* SwiftyLayouts.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF0A92F5980C1F69BB9A53C1AC7B66A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,12 +246,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FAB22C57FACEC52E4D5529BD0341C3CF /* Development Pods */ = {
+		DC5DD00F46F022AEC49CA414F3A1B8BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				954A63984DB37DCC7B837F48BAB4656E /* SwiftyLayouts */,
+				9AB32B71C4E8B7908F446179B3CAECC4 /* barButtonItem.png */,
+				F0D42EFFD3B22FB4F9326578EB2303CB /* barButtonItem@2x.png */,
+				17C233638DCE4B0BA20DD777BB2043AD /* barButtonItem@3x.png */,
+				351B2399CD8C39EB3B0C06F270EC19CE /* default.png */,
+				43658BF5FC60AAFF7166B640B701545D /* default@2x.png */,
+				0870DA9F6B74229CAB52D4C426111EC0 /* default@3x.png */,
+				CAC7245E0E4746C7A4DB0528EB2AD9AD /* logo.png */,
+				2FBE085C22DB7BAAECCF314A685E8999 /* logo@2x.png */,
+				FA68D1D9794BB132118EEBFA5B122987 /* logo@3x.png */,
 			);
-			name = "Development Pods";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +335,7 @@
 				C84F8AB6457EC0868D71409672A2A028 /* Sources */,
 				346D74BD8C43A9B6F3001BB5348AAFFE /* Frameworks */,
 				4DAB6E16F879A5C9707F8E514E64A870 /* Headers */,
-				F2AA39791BF33B4DFB2DEA9413A4810C /* Resources */,
+				ACD23497288DF4D495B4692687ED848F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -339,11 +375,19 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F2AA39791BF33B4DFB2DEA9413A4810C /* Resources */ = {
+		ACD23497288DF4D495B4692687ED848F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C6B41991D6E6AAF0ABE71541E4C556 /* kaushalLinked.jpg in Resources */,
+				7B7E05DB433F6F570F9908F26B9DD495 /* barButtonItem.png in Resources */,
+				2B5442265CE4DFA72375D9E70B076C1E /* barButtonItem@2x.png in Resources */,
+				B543E4C1D021E5F909C04629CC613546 /* barButtonItem@3x.png in Resources */,
+				4C6EA592C529084F3E86CFA855446B46 /* default.png in Resources */,
+				4D6A949632EF0AD0F56578FC8A9CDB1C /* default@2x.png in Resources */,
+				9DB9D87A16A324745E6D4AFAA3478908 /* default@3x.png in Resources */,
+				973ACEC905612D2C02B87F4AFABD4A17 /* logo.png in Resources */,
+				5AC55F4B2633233D70DE56C6683B90D1 /* logo@2x.png in Resources */,
+				84054699FAC34661479C90C06A7A3BA7 /* logo@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +501,7 @@
 		};
 		66A0452238746E2DBF92828D668D959C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57CC9843BF263540FE873646BF4CD357 /* SwiftyLayouts.xcconfig */;
+			baseConfigurationReference = 4CD90B190DA7A410719A6AF0271B76FF /* SwiftyLayouts.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -638,7 +682,7 @@
 		};
 		D94A4093A60872945B306D267314A73A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57CC9843BF263540FE873646BF4CD357 /* SwiftyLayouts.xcconfig */;
+			baseConfigurationReference = 4CD90B190DA7A410719A6AF0271B76FF /* SwiftyLayouts.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
