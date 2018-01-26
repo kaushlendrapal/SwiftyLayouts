@@ -31,7 +31,7 @@ under the terms specified in the [LICENSE] file.
 
 ## About
 
-![SwiftyLayouts icon] (/Resources/swiftylayouts.sketch)
+![SwiftyLayouts ]: https://github.com/kaushlendrapal/SwiftyLayouts/tree/develop/Resources/swiftylayouts.sketch
 
 library used to provide delight collection view layouts.
 
