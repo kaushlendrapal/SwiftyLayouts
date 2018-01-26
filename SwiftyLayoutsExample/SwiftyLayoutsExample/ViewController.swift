@@ -20,12 +20,13 @@ final class ViewController: UIViewController , UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setupNavigationBarItems()
         setUpView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +41,10 @@ final class ViewController: UIViewController , UITableViewDelegate, UITableViewD
         self.tableView.separatorStyle = .none
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    func setupNavigationBarItems() -> Void {
+        self.title = "Swifty Layouts"
     }
 }
 
@@ -64,8 +69,9 @@ extension ViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let collectionDatasource:[Feature] = CardViewController.mock_collectionDatasource_fromFeatureModel()
-        
+        let labelText = tableViewDataSource[indexPath.row]
         let cardViewController = CardViewControllerDependecy.cardViewController(identifier:"CardViewController", dependency: collectionDatasource).instantiateCardViewController()
+        cardViewController.title = labelText
         self.navigationController?.pushViewController(cardViewController, animated: true)
     }
     

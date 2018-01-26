@@ -34,6 +34,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        setupNavigationBarItems()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,6 +51,11 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.dataSource = self
         customLayout?.delegate = self
         
+    }
+    func setupNavigationBarItems() -> Void {
+//        self.title = "Swifty Layouts"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.title = ""
     }
 }
 
