@@ -21,9 +21,11 @@ extension LayoutDelegate {
 
 public class CardViewLayout: UICollectionViewLayout {
     
+    private var registeredDecorationClasses:[String:AnyClass] = [:]
     private var itemLayoutAttributeCache = [IndexPath: UICollectionViewLayoutAttributes]()
     private var decorationLayoutAttributeCache = [IndexPath: UICollectionViewLayoutAttributes]()
     private var headerLayoutAttributeCache = [Int: UICollectionViewLayoutAttributes]()
+    private var footerLayoutAttributeCache = [Int: UICollectionViewLayoutAttributes]()
 
     private var collectionViewContentHeight: CGFloat = 0
     public var layoutSetting = LayoutSetting()
@@ -47,6 +49,11 @@ public class CardViewLayout: UICollectionViewLayout {
         }
         let insets = collectionView.contentInset
         return collectionView.bounds.width - (insets.left + insets.right) - (layoutSetting.cellMargin.left + layoutSetting.cellMargin.right)
+    }
+    
+    public override func register(_ viewClass: AnyClass?, forDecorationViewOfKind elementKind: String) {
+        registeredDecorationClasses[elementKind] = viewClass
+        super.register(viewClass, forDecorationViewOfKind: elementKind)
     }
 }
 
@@ -87,18 +94,26 @@ extension CardViewLayout {
         
         switch elementKind {
         case UICollectionElementKindSectionHeader:
-            return nil
-            
+            guard let headerAttribute = headerLayoutAttributeCache[indexPath.section] else {
+                fatalError("headerAttribute view elemen is must to draw layout")
+            }
+            return headerAttribute
         case UICollectionElementKindSectionFooter:
-            return nil
+            guard let footerAttribute = footerLayoutAttributeCache[indexPath.section] else {
+                fatalError("footerAttribute view elemen is must to draw layout")
+            }
+            return footerAttribute
         default:
-            return nil
+            fatalError("wrong element kind for suplementry view")
         }
     }
     
     public override func layoutAttributesForDecorationView(ofKind elementKind: String,
                                                            at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return nil
+        guard let decorationAttribute = decorationLayoutAttributeCache[indexPath] else {
+            fatalError("decoration view elemen is must to draw layout")
+        }
+        return decorationAttribute
     }
 }
 
@@ -120,20 +135,30 @@ private extension CardViewLayout {
             
             for item in 0 ..< collectionView.numberOfItems(inSection: section) {
                 let cellIndexPath = IndexPath(item: item, section: section)
-                let attributes = UICollectionViewLayoutAttributes(forCellWith: cellIndexPath)
-                let lineInterSpace = layoutSetting.cellMargin.top
-                let cellHeight: CGFloat = delegate.collectionView(collectionView, heightForPhotoAtIndexPath: cellIndexPath)
-                attributes.frame = CGRect(
-                    x: 0 + layoutSetting.cellMargin.left,
-                    y: collectionViewContentHeight + lineInterSpace,
-                    width: cellWidth,
-                    height:cellHeight
-                )
-                collectionViewContentHeight = attributes.frame.maxY
-                itemLayoutAttributeCache[cellIndexPath] = attributes
+                let attribute = createItemAttribute(forCellWith:cellIndexPath)
+                collectionViewContentHeight = attribute.frame.maxY
+                itemLayoutAttributeCache[cellIndexPath] = attribute
             }
             
         }
+    }
+    
+    private func createItemAttribute(forCellWith cellIndexPath:IndexPath) -> (UICollectionViewLayoutAttributes) {
+        let attribute = UICollectionViewLayoutAttributes(forCellWith: cellIndexPath)
+        let cellHeight: CGFloat = delegate.collectionView(self.collectionView!, heightForPhotoAtIndexPath: cellIndexPath)
+        let itemMinY:CGFloat = collectionViewContentHeight + layoutSetting.cellMargin.top
+        let itemMaxY:CGFloat = collectionViewContentHeight + layoutSetting.cellMargin.top + cellHeight + layoutSetting.cellMargin.bottom
+        let itemMinX:CGFloat = layoutSetting.cellMargin.left + layoutSetting.contentMargin.left
+        let itemMaxX:CGFloat = collectionView!.bounds.width - (layoutSetting.cellMargin.right + layoutSetting.contentMargin.right)
+        attribute.frame = CGRect(
+            x:itemMinX,
+            y:itemMinY,
+            width:(itemMaxX - itemMinX),
+            height:(itemMaxY - itemMinY)
+        )
+        attribute.zIndex = layoutSetting.minItemZIndex
+        
+       return attribute
     }
     
     private func updateCells(_ attributes: UICollectionViewLayoutAttributes, halfHeight: CGFloat, halfCellHeight: CGFloat) {
@@ -145,9 +170,24 @@ private extension CardViewLayout {
     }
     
     func invalidateLayoutWithCache() -> Void {
+        // Invalidate cached Components
         itemLayoutAttributeCache.removeAll(keepingCapacity: true)
+        decorationLayoutAttributeCache.removeAll(keepingCapacity: true)
+        headerLayoutAttributeCache.removeAll(keepingCapacity: true)
+        footerLayoutAttributeCache.removeAll(keepingCapacity: true)
+
         shouldInvalidateLayout(forBoundsChange: CGRect.zero)
     }
+    
+    func zIndexFor(_ elementKind:String, floating:Bool = false) -> CGFloat {
+        
+        if elementKind == LayoutElementKind.itemTopDecorator.rawValue {
+            
+        }
+        
+        return 10
+    }
+
 }
 
 
