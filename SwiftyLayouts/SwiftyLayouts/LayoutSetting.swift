@@ -15,7 +15,9 @@ public struct LayoutSetting {
      var cellMargin:UIEdgeInsets
      var minHeaderOverlayZIndex:Int = 1000
      var minItemZIndex:Int = 100
-
+     var floatingHeaders:Bool = false
+     var floatingFooters:Bool = false
+    
     
     init() {
         self.contentMargin = UIEdgeInsets.zero

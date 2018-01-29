@@ -11,6 +11,8 @@ import SwiftyLayouts
 
 fileprivate struct RegisteredCellClassIdentifier {
     static let layoutCollectionViewCell:String = "LayoutCollectionViewCell"
+    static let layoutCollectionViewHeader:String = "LayoutCollectionViewHeader"
+
 }
 
 class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, LayoutDelegate  {
@@ -47,6 +49,8 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setUpView() -> Void {
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewHeader)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         customLayout?.delegate = self
@@ -65,7 +69,6 @@ extension CardViewController {
         return 1
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionDataSource.count
     }
@@ -77,16 +80,36 @@ extension CardViewController {
         
         return layoutCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var separator:UICollectionReusableView
+        
+        if (kind == UICollectionElementKindSectionHeader) {
+            separator = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:RegisteredCellClassIdentifier.layoutCollectionViewHeader, for: indexPath)
+            separator.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        } else {
+            separator = UICollectionReusableView(frame: CGRect.zero)
+        }
+        
+        return separator
+    }
+    
 }
 
 extension CardViewController {
-    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+    
+    func collectionView(_ collectionView:UICollectionView, heightForCellAtIndexPath indexPath:IndexPath) -> CGFloat {
         if (indexPath.row % 2) == 0 {
             return 50
         } else {
             return 100
         }
     }
+    
+    func collectionView(_ collectionView:UICollectionView, heightForSuplementryViewAtIndexPath indexPath:IndexPath) -> CGFloat {
+        return 50
+    }
+    
 }
 
 private extension CardViewController {
