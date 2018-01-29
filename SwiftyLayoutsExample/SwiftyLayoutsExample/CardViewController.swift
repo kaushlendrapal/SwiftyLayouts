@@ -77,6 +77,7 @@ extension CardViewController {
         var layoutCell:LayoutCollectionViewCell!
         layoutCell = collectionView.dequeueReusableCell(withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewCell, for: indexPath) as! LayoutCollectionViewCell
         // Configure the cell
+        layoutCell.configureCell()
         
         return layoutCell
     }
@@ -99,11 +100,7 @@ extension CardViewController {
 extension CardViewController {
     
     func collectionView(_ collectionView:UICollectionView, heightForCellAtIndexPath indexPath:IndexPath) -> CGFloat {
-        if (indexPath.row % 2) == 0 {
-            return 50
-        } else {
-            return 100
-        }
+        return 120
     }
     
     func collectionView(_ collectionView:UICollectionView, heightForSuplementryViewAtIndexPath indexPath:IndexPath) -> CGFloat {
@@ -116,7 +113,7 @@ private extension CardViewController {
     func setupCollectionViewLayout() {
         guard /*let collectionView = collectionView,*/ let customLayout = customLayout else { return }
         // register for layout elements
-        let layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(2, 10, 2, 10))
+        let layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(15, 10, 15, 10))
         customLayout.layoutSetting = layoutSetting
     }
 }
@@ -156,4 +153,23 @@ extension CardViewController {
         return features
     }
 
+}
+
+extension LayoutCollectionViewCell {
+   
+    func configureCell() -> Void {
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.contentView.layer.borderWidth = 5
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.cornerRadius = 10.0
+        self.contentView.layer.masksToBounds = true
+        
+        layer.cornerRadius = 10
+        self.layer.shadowColor = #colorLiteral(red: 0.8745098039, green: 0.8901960784, blue: 0.937254902, alpha: 1)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 5
+        layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:10).cgPath
+    }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,22 +82,83 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-jT-JvT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.97999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CKt-G5-2ke" customClass="CardViewLayout" customModule="SwiftyLayouts">
-                                    <size key="itemSize" width="350" height="100"/>
+                                    <size key="itemSize" width="350" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LayoutCollectionViewCell" id="0nQ-Uh-Wn2" customClass="LayoutCollectionViewCell" customModule="SwiftyLayoutsExample" customModuleProvider="target">
-                                        <rect key="frame" x="12.5" y="0.0" width="350" height="100"/>
+                                        <rect key="frame" x="12.5" y="0.0" width="350" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2S1-9X-vOF">
+                                                    <rect key="frame" x="20" y="12" width="100" height="100"/>
+                                                    <color key="backgroundColor" red="0.87450980389999999" green="0.89019607840000003" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="3zR-Ip-gim"/>
+                                                        <constraint firstAttribute="height" constant="100" id="dF7-NO-b4J"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-Z2-wDg">
+                                                    <rect key="frame" x="140" y="22" width="176" height="31"/>
+                                                    <color key="backgroundColor" red="0.87450980389999999" green="0.89019607840000003" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="P81-2c-A7j"/>
+                                                        <constraint firstAttribute="width" constant="176" id="fWk-Mu-46T"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVv-5n-lH4">
+                                                    <rect key="frame" x="140" y="70" width="120" height="25"/>
+                                                    <color key="backgroundColor" red="0.87450980389999999" green="0.89019607840000003" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="XE9-EG-8XU"/>
+                                                        <constraint firstAttribute="width" constant="120" id="llM-Hg-qhv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.95686274509803915" green="0.6588235294117647" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bVv-5n-lH4" secondAttribute="trailing" constant="30" id="3We-0c-Zli"/>
+                                            <constraint firstItem="Gdj-Z2-wDg" firstAttribute="top" secondItem="2S1-9X-vOF" secondAttribute="top" constant="10" id="Ctt-Q2-Gqz"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2S1-9X-vOF" secondAttribute="bottom" constant="5" id="IaR-jv-fqp"/>
+                                            <constraint firstItem="bVv-5n-lH4" firstAttribute="top" secondItem="Gdj-Z2-wDg" secondAttribute="bottom" constant="17" id="N1Y-4Q-jwD"/>
+                                            <constraint firstItem="2S1-9X-vOF" firstAttribute="top" secondItem="0nQ-Uh-Wn2" secondAttribute="top" constant="12" id="Tpd-mb-jaL"/>
+                                            <constraint firstItem="Gdj-Z2-wDg" firstAttribute="leading" secondItem="2S1-9X-vOF" secondAttribute="trailing" constant="20" id="caG-Mt-9ci"/>
+                                            <constraint firstItem="bVv-5n-lH4" firstAttribute="leading" secondItem="Gdj-Z2-wDg" secondAttribute="leading" id="iUp-OD-c4h"/>
+                                            <constraint firstItem="2S1-9X-vOF" firstAttribute="leading" secondItem="0nQ-Uh-Wn2" secondAttribute="leading" constant="20" id="kj7-t6-JWV"/>
+                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Gdj-Z2-wDg" secondAttribute="trailing" constant="10" id="kj8-Kt-zO0"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -116,7 +178,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHD-aX-MSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808" y="115"/>
+            <point key="canvasLocation" x="807.20000000000005" y="114.69265367316342"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="120" height="120"/>
+    </resources>
 </document>
