@@ -78,6 +78,7 @@ extension CardViewLayout {
                     visibleLayoutAttributes.append(attributes)
                 }
             case .supplementaryView :
+                updateSupplementaryViews(attributes: attributes, collectionView: collectionView!, indexPath:IndexPath(item: 0, section: 0))
                 visibleLayoutAttributes.append(attributes)
             case .decorationView :
                 break
@@ -88,8 +89,8 @@ extension CardViewLayout {
     
    @discardableResult public override func shouldInvalidateLayout(
                                             forBoundsChange newBounds: CGRect) -> Bool {
-    return true
-//    return !newBounds.size.equalTo(self.collectionView!.frame.size)
+//    return true
+    return !newBounds.size.equalTo(self.collectionView!.frame.size)
     }
 }
 
@@ -184,7 +185,7 @@ private extension CardViewLayout {
     
         let attribute = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, with:cellIndexPath)
         let cellHeight: CGFloat = delegate.collectionView(self.collectionView!, heightForSuplementryViewAtIndexPath:cellIndexPath)
-        let itemMinY:CGFloat = max(collectionView!.contentOffset.y, (collectionViewContentHeight + layoutSetting.sectionMargin.top))
+        let itemMinY:CGFloat = min(collectionView!.contentOffset.y, (collectionViewContentHeight + layoutSetting.sectionMargin.top))
         let itemMaxY:CGFloat = itemMinY + cellHeight + layoutSetting.sectionMargin.bottom
         let itemMinX:CGFloat = layoutSetting.sectionMargin.left + layoutSetting.contentMargin.left
         let itemMaxX:CGFloat = collectionView!.bounds.width - (layoutSetting.sectionMargin.right + layoutSetting.contentMargin.right)
@@ -205,7 +206,18 @@ private extension CardViewLayout {
     }
     
     private func updateSupplementaryViews(attributes: UICollectionViewLayoutAttributes, collectionView: UICollectionView, indexPath: IndexPath) {
-        
+        let cellHeight: CGFloat = delegate.collectionView(collectionView, heightForSuplementryViewAtIndexPath:indexPath)
+        let itemMinY:CGFloat = min(collectionView.contentOffset.y, (collectionViewContentHeight + layoutSetting.sectionMargin.top))
+        let itemMaxY:CGFloat = itemMinY + cellHeight + layoutSetting.sectionMargin.bottom
+        let itemMinX:CGFloat = layoutSetting.sectionMargin.left + layoutSetting.contentMargin.left
+        let itemMaxX:CGFloat = collectionView.bounds.width - (layoutSetting.sectionMargin.right + layoutSetting.contentMargin.right)
+        attributes.frame = CGRect(
+            x:itemMinX,
+            y:itemMinY,
+            width:(itemMaxX - itemMinX),
+            height:(itemMaxY - itemMinY)
+        )
+        attributes.zIndex = layoutSetting.minHeaderOverlayZIndex
     }
     
     func invalidateLayoutWithCache() -> Void {

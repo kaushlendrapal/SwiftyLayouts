@@ -165,7 +165,7 @@ extension LayoutCollectionViewCell {
         self.contentView.layer.masksToBounds = true
         
         layer.cornerRadius = 10
-        self.layer.shadowColor = #colorLiteral(red: 0.8745098039, green: 0.8901960784, blue: 0.937254902, alpha: 1)
+        self.layer.shadowColor = #colorLiteral(red: 0.7123416428, green: 0.7265018714, blue: 0.7689825574, alpha: 1)
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 5
