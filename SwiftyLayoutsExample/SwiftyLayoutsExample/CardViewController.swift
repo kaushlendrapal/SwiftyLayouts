@@ -11,6 +11,8 @@ import SwiftyLayouts
 
 fileprivate struct RegisteredCellClassIdentifier {
     static let layoutCollectionViewCell:String = "LayoutCollectionViewCell"
+    static let layoutCollectionViewHeader:String = "LayoutCollectionViewHeader"
+
 }
 
 class CardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, LayoutDelegate  {
@@ -34,6 +36,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        setupNavigationBarItems()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,10 +49,17 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setUpView() -> Void {
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewHeader)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         customLayout?.delegate = self
         
+    }
+    func setupNavigationBarItems() -> Void {
+//        self.title = "Swifty Layouts"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.title = ""
     }
 }
 
@@ -59,7 +69,6 @@ extension CardViewController {
         return 1
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionDataSource.count
     }
@@ -68,26 +77,43 @@ extension CardViewController {
         var layoutCell:LayoutCollectionViewCell!
         layoutCell = collectionView.dequeueReusableCell(withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewCell, for: indexPath) as! LayoutCollectionViewCell
         // Configure the cell
+        layoutCell.configureCell()
         
         return layoutCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        var separator:UICollectionReusableView
+        
+        if (kind == UICollectionElementKindSectionHeader) {
+            separator = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:RegisteredCellClassIdentifier.layoutCollectionViewHeader, for: indexPath)
+            separator.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        } else {
+            separator = UICollectionReusableView(frame: CGRect.zero)
+        }
+        
+        return separator
+    }
+    
 }
 
 extension CardViewController {
-    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-        if (indexPath.row % 2) == 0 {
-            return 50
-        } else {
-            return 100
-        }
+    
+    func collectionView(_ collectionView:UICollectionView, heightForCellAtIndexPath indexPath:IndexPath) -> CGFloat {
+        return 120
     }
+    
+    func collectionView(_ collectionView:UICollectionView, heightForSuplementryViewAtIndexPath indexPath:IndexPath) -> CGFloat {
+        return 50
+    }
+    
 }
 
 private extension CardViewController {
     func setupCollectionViewLayout() {
         guard /*let collectionView = collectionView,*/ let customLayout = customLayout else { return }
         // register for layout elements
-        let layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(2, 10, 2, 10))
+        let layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(15, 10, 15, 10))
         customLayout.layoutSetting = layoutSetting
     }
 }
@@ -127,4 +153,23 @@ extension CardViewController {
         return features
     }
 
+}
+
+extension LayoutCollectionViewCell {
+   
+    func configureCell() -> Void {
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.contentView.layer.borderWidth = 5
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.cornerRadius = 10.0
+        self.contentView.layer.masksToBounds = true
+        
+        layer.cornerRadius = 10
+        self.layer.shadowColor = #colorLiteral(red: 0.7123416428, green: 0.7265018714, blue: 0.7689825574, alpha: 1)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 5
+        layer.masksToBounds = false
+        self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:10).cgPath
+    }
 }

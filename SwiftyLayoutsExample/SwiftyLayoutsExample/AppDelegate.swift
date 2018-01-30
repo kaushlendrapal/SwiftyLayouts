@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = nav;
         self.window?.makeKeyAndVisible();
-        
+        setupNavigationBarApperance()
         return true
     }
 
@@ -49,7 +49,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func setupNavigationBarApperance() -> Void {
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        navigationBarAppearace.barTintColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        // change navigation item title color
+        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
 
+    }
 
 }
 
