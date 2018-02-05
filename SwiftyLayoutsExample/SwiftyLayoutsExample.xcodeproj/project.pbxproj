@@ -31,6 +31,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E1B6538E20205CAE007B742C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		54338C8BD12E862FD1E46012 /* Pods-SwiftyLayoutsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyLayoutsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyLayoutsExample/Pods-SwiftyLayoutsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		73418EAEC16BD12961483DED /* Pods_SwiftyLayoutsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyLayoutsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +174,7 @@
 				E1415D40200F65E800651407 /* Resources */,
 				99E95EAEA3AF30FF95E5ED69 /* [CP] Embed Pods Frameworks */,
 				A438BD472D1711EAC66114A6 /* [CP] Copy Pods Resources */,
+				E1B6538E20205CAE007B742C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -520,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54338C8BD12E862FD1E46012 /* Pods-SwiftyLayoutsExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -537,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0F16621D95DD2176AA08FA3 /* Pods-SwiftyLayoutsExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

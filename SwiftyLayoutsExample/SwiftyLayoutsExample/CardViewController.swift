@@ -12,6 +12,7 @@ import SwiftyLayouts
 fileprivate struct RegisteredCellClassIdentifier {
     static let layoutCollectionViewCell:String = "LayoutCollectionViewCell"
     static let layoutCollectionViewHeader:String = "LayoutCollectionViewHeader"
+    static let layoutCollectionViewFooter:String = "LayoutCollectionViewFooter"
 
 }
 
@@ -50,12 +51,14 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func setUpView() -> Void {
         collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewHeader)
-        
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind:UICollectionElementKindSectionFooter, withReuseIdentifier: RegisteredCellClassIdentifier.layoutCollectionViewFooter)
+        collectionView.contentInset = UIEdgeInsets.zero
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
         customLayout?.delegate = self
-        
     }
+    
     func setupNavigationBarItems() -> Void {
 //        self.title = "Swifty Layouts"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -66,7 +69,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
 extension CardViewController {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,15 +89,22 @@ extension CardViewController {
         var separator:UICollectionReusableView
         
         if (kind == UICollectionElementKindSectionHeader) {
-            separator = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:RegisteredCellClassIdentifier.layoutCollectionViewHeader, for: indexPath)
+            separator = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier:RegisteredCellClassIdentifier.layoutCollectionViewHeader, for: indexPath)
             separator.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            if indexPath == IndexPath(index:0) {
+                separator.backgroundColor = #colorLiteral(red: 0.7598647549, green: 0.5621008782, blue: 1, alpha: 1)
+            }
+            
+        } else if (kind == UICollectionElementKindSectionFooter) {
+            separator = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier:RegisteredCellClassIdentifier.layoutCollectionViewFooter, for: indexPath)
+            separator.backgroundColor = #colorLiteral(red: 0.7598647549, green: 0.5621008782, blue: 1, alpha: 1)
         } else {
             separator = UICollectionReusableView(frame: CGRect.zero)
         }
-        
+
         return separator
     }
-    
+//    */
 }
 
 extension CardViewController {
@@ -103,17 +113,37 @@ extension CardViewController {
         return 120
     }
     
-    func collectionView(_ collectionView:UICollectionView, heightForSuplementryViewAtIndexPath indexPath:IndexPath) -> CGFloat {
-        return 50
+    func collectionView(_ collectionView:UICollectionView, ofSuplementryViewKind kind: String,  heightAtIndexPath indexPath:IndexPath) -> CGFloat {
+        var height:CGFloat = CGFloat.leastNormalMagnitude
+        
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            if indexPath == IndexPath(index:0) {
+                height = 200 //CGFloat.leastNormalMagnitude
+            } else {
+                height = 50
+            }
+        case UICollectionElementKindSectionFooter:
+            if indexPath == IndexPath(index:0) {
+                height = 200 //CGFloat.leastNormalMagnitude
+            } else {
+                height = CGFloat.leastNormalMagnitude
+            }
+        default:
+            height = 50
+        }
+        
+        return height
     }
-    
+ 
 }
 
 private extension CardViewController {
     func setupCollectionViewLayout() {
-        guard /*let collectionView = collectionView,*/ let customLayout = customLayout else { return }
+        guard let customLayout = customLayout else { return }
         // register for layout elements
-        let layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsets.zero, cellMargin: UIEdgeInsetsMake(15, 10, 15, 10))
+        var layoutSetting = LayoutSetting(contentMargin: UIEdgeInsets.zero, sectionMargin: UIEdgeInsetsMake(5, 10, 5, 10), cellMargin: UIEdgeInsetsMake(5, 10, 5, 10))
+        layoutSetting.floatingHeaders = true
         customLayout.layoutSetting = layoutSetting
     }
 }
@@ -170,6 +200,6 @@ extension LayoutCollectionViewCell {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 5
         layer.masksToBounds = false
-        self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:10).cgPath
+        self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:0).cgPath
     }
 }
