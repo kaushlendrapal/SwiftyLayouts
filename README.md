@@ -31,7 +31,7 @@ under the terms specified in the [LICENSE] file.
 
 ## About
 
-![SwiftyLayouts ](/Resources/swiftylayouts.png)
+![SwiftyLayouts ](/Resources/swiftylayouts_v1.png)
 
 library used to provide delight collection view layouts.
 
