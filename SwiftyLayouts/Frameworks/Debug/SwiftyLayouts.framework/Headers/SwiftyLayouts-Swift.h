@@ -173,6 +173,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import CoreGraphics;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -185,6 +187,32 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_MODULE_NAMESPACE_PUSH("SwiftyLayouts")
 @class NSCoder;
+
+SWIFT_CLASS("_TtC13SwiftyLayouts14CardViewLayout")
+@interface CardViewLayout : UICollectionViewLayout
+@property (nonatomic, readonly) CGSize collectionViewContentSize;
+- (void)registerClass:(Class _Nullable)viewClass forDecorationViewOfKind:(NSString * _Nonnull)elementKind;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionViewLayoutAttributes;
+
+@interface CardViewLayout (SWIFT_EXTENSION(SwiftyLayouts))
+- (UICollectionViewLayoutAttributes * _Nonnull)layoutAttributesForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nullable)layoutAttributesForSupplementaryViewOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewLayoutAttributes * _Nonnull)layoutAttributesForDecorationViewOfKind:(NSString * _Nonnull)elementKind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface CardViewLayout (SWIFT_EXTENSION(SwiftyLayouts))
+- (void)prepareLayout;
+- (NSArray<UICollectionViewLayoutAttributes *> * _Nullable)layoutAttributesForElementsInRect:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds;
+@end
+
+
+
 
 SWIFT_CLASS("_TtC13SwiftyLayouts16WeeklyViewLayout")
 @interface WeeklyViewLayout : UICollectionViewLayout
