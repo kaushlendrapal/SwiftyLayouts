@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "SwiftyLayouts-Debug"
+  s.name         = "SwiftyLayouts"
   s.version      = "1.0.0"
   s.summary      = "SwiftyLayouts-Debug. library for iOS"
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :path => "build/", :tag => "#{s.version}" }
+  s.source       = { :path => ".", :tag => "#{s.version}" }
 #  s.source       = { :path => "FrameWorks/debug/", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,9 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-# s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.{h,m,swift}"
-  s.source_files  = "SwiftyLayouts", "build/SwiftyLayouts.framework/*"
-# s.exclude_files = "SwiftyLayouts/**/*.{h,m,swift}"
+  s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.{h,m,swift}"
+# s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "SwiftyLayouts/**/*.h"
 
@@ -130,9 +130,6 @@ Pod::Spec.new do |s|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-    s.module_name = 'SwiftyLayouts'
-    s.vendored_frameworks = 'SwiftyLayouts.framework'
 
   # s.requires_arc = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
