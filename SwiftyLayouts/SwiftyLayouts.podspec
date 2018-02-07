@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/kaushlendrapal/SwiftyLayouts"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  # s.screenshots  = "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo1.gif", "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo3.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license        = "Apache License"
-  s.license      = { :type => "Apache License", :file => "../LICENSE" }
+  s.license        = "MIT License"
+  s.license      = { :type => "MIT", :file => "../LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "kaushal" => "kaushlendra pal" }
+  s.author             = { "ideveloperlab" => "kaushlendra pal" }
   # Or just: s.author    = ""
   # s.authors            = { "" => "" }
    s.social_media_url   = "https://ideveloperlab.wordpress.com/"
@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.{h,m,swift}"
-# s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
+    s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.swift"
+  # s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "SwiftyLayouts/**/*.h"
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
+  # s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -132,7 +132,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
