@@ -10,7 +10,7 @@ project ‘SwiftyLayoutsExample’, {
 
 def applibs
 
- pod ‘SwiftyLayouts', :configuration => ['Debug'], :path  => '../SwiftyLayouts/SwiftyLayouts.podspec'
+#pod ‘SwiftyLayouts', :configuration => ['Debug'], :path  => '../SwiftyLayouts/SwiftyLayouts.podspec'
 # pod 'SwiftyLayouts', :configuration => ['Debug'], :path  => '../Frameworks/SwiftyLayouts/SwiftyLayouts.podspec'
 
 end
@@ -23,7 +23,7 @@ target 'SwiftyLayoutsExample' do
     workspace 'SwiftyLayoutsExample.xcworkspace'
     project 'SwiftyLayoutsExample.xcodeproj'
     applibs
-#    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyLayouts', '~> 1.0.0'
   # Pods for SwiftyLayoutsExample
 
   target 'SwiftyLayoutsExampleTests' do

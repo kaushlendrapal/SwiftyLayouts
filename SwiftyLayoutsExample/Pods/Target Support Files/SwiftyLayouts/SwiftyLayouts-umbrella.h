@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "SwiftyLayouts.h"
 
 FOUNDATION_EXPORT double SwiftyLayoutsVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftyLayoutsVersionString[];
