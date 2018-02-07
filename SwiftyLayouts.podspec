@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   s.license        = "MIT License"
-  s.license      = { :type => "MIT", :file => "../LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-    s.source_files  = "SwiftyLayouts", "SwiftyLayouts/**/*.swift"
+    s.source_files  = "SwiftyLayouts", "SwiftyLayouts/SwiftyLayouts/*.swift"
   # s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
+   s.resources = "Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
