@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../SwiftyLayouts/SwiftyLayouts.podspec
 
 SPEC CHECKSUMS:
-  SwiftyLayouts: 6ee49ae0119e6f21d716ca99c2fd865121c76e17
+  SwiftyLayouts: 6aa6f4c171221e9431e2f2bb3cee622aefbdc750
 
 PODFILE CHECKSUM: a8eab77c74214641075c1ea08601510678039f80
 

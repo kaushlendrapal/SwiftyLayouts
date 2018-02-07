@@ -23,8 +23,5 @@
     "SwiftyLayouts",
     "SwiftyLayouts/**/*.{h,m,swift}"
   ],
-  "resources": "../Resources/*.{png,jpg}",
-  "pod_target_xcconfig": {
-    "SWIFT_VERSION": "4.0"
-  }
+  "resources": "SwiftyLayouts/Resources/*.{png,jpg}"
 }

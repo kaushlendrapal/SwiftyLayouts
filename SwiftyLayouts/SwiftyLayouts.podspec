@@ -132,7 +132,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
