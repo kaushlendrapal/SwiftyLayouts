@@ -2,15 +2,15 @@ PODS:
   - SwiftyLayouts (1.0.0)
 
 DEPENDENCIES:
-  - SwiftyLayouts (from `../Frameworks/SwiftyLayouts/SwiftyLayouts.podspec`)
+  - SwiftyLayouts (from `../SwiftyLayouts/SwiftyLayouts.podspec`)
 
 EXTERNAL SOURCES:
   SwiftyLayouts:
-    :path: ../Frameworks/SwiftyLayouts/SwiftyLayouts.podspec
+    :path: ../SwiftyLayouts/SwiftyLayouts.podspec
 
 SPEC CHECKSUMS:
-  SwiftyLayouts: 0b7f988ddca13f9138ad8771caf22b668c3a7f2a
+  SwiftyLayouts: 6ee49ae0119e6f21d716ca99c2fd865121c76e17
 
-PODFILE CHECKSUM: 04b5badca0655d66365804bee0c472219e14f6d3
+PODFILE CHECKSUM: a8eab77c74214641075c1ea08601510678039f80
 
 COCOAPODS: 1.3.1

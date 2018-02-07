@@ -53,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "" => "" }
+  s.author             = { "kaushal" => "kaushlendra pal" }
   # Or just: s.author    = ""
   # s.authors            = { "" => "" }
-  # s.social_media_url   = "https://www.linkedin.com/in/kaushlendrapal/"
+   s.social_media_url   = "https://ideveloperlab.wordpress.com/"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -80,8 +80,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :path => ".", :tag => "#{s.version}" }
-#  s.source       = { :path => "FrameWorks/debug/", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/kaushlendrapal/SwiftyLayouts.git", :tag => "#{s.version}" }
+# s.source       = { :path => ".", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -107,7 +107,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "SwiftyLayouts/Resources/*.{png,jpg}"
+  s.resources = "../Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -132,7 +132,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   # s.requires_arc = true
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"

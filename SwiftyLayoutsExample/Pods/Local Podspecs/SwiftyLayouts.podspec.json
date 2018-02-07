@@ -9,8 +9,9 @@
     "file": "../LICENSE"
   },
   "authors": {
-    "": ""
+    "kaushal": "kaushlendra pal"
   },
+  "social_media_url": "https://ideveloperlab.wordpress.com/",
   "platforms": {
     "ios": "10.0"
   },
@@ -20,12 +21,9 @@
   },
   "source_files": [
     "SwiftyLayouts",
-    "Frameworks/SwiftyLayouts/SwiftyLayouts.framework"
+    "SwiftyLayouts/**/*.{h,m,swift}"
   ],
-  "resources": "SwiftyLayouts/Resources/*.{png,jpg}",
-  "ios": {
-    "vendored_frameworks": "SwiftyLayouts.framework"
-  },
+  "resources": "../Resources/*.{png,jpg}",
   "pod_target_xcconfig": {
     "SWIFT_VERSION": "4.0"
   }
