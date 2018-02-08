@@ -4,8 +4,10 @@
 
 # SwiftyLayouts
 
-![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif)
+---
+![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif) ![](docs/swiftyLayout_demo4.gif)
 
+---
 
 ## Release Notes
 
@@ -26,6 +28,8 @@ library used to provide delight collection view layouts.
 - If you **found a bug**, open an issue.
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
+
+---
 
 ## Installation
 
@@ -95,9 +99,13 @@ $ git submodule add https://github.com/kaushlendrapal/SwiftyLayouts.git
 
 > The `SwiftyLayouts.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
+---
+
 ## Setup
 
 ##### Find the above displayed examples in the `SwiftyLayoutsExample` folder.
+
+---
 
 ## Contributing
 
@@ -107,10 +115,13 @@ Thank you, [contributors]!
 [CONTRIBUTING]: CONTRIBUTING.md
 [contributors]: https://github.com/kaushlendrapal/SwiftyLayouts/graphs/contributors
 
+---
+
 ## FAQ
 
 ####  How can I add Global header to Layout?
 
+---
 
 ## License
 
@@ -118,6 +129,8 @@ SwiftyLayouts library are Copyright (c) 2018 www.ideveloperlab.com
 It contains free software that may be redistributed under MIT license [LICENSE] .
 
 [LICENSE]: /LICENSE
+
+---
 
 ## About
 
