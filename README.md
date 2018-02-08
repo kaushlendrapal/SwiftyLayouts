@@ -1,21 +1,19 @@
-
-![](docs/swiftyLayout_demo1.gif)![](docs/swiftyLayout_demo2.gif)![](docs/swiftyLayout_demo3.gif)
-
-[![Build Status](https://travis-ci.org/Alamofire/Alamofire.svg?branch=master)]
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Alamofire.svg)]
-[![Gitter](https://badges.gitter.im/Alamofire/Alamofire.svg)]
+![Build Status](https://travis-ci.org/Alamofire/Alamofire.svg?branch=master)
+![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Alamofire.svg)
+![Gitter](https://badges.gitter.im/Alamofire/Alamofire.svg)
 
 # SwiftyLayouts
+
+![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif)
+
+
+## Release Notes
 
 library used to provide delight collection view layouts.
 
 - [X] Pure Swift 4.
 - [X] Works with every `UICollectionView`.
 - [X] vertical scrolling support.
-
-## Setup
-
-##### Find the above displayed examples in the `SwiftyLayoutsExample` folder.
 
 ## Requirements
 
@@ -97,6 +95,10 @@ $ git submodule add https://github.com/kaushlendrapal/SwiftyLayouts.git
 
 > The `SwiftyLayouts.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
+## Setup
+
+##### Find the above displayed examples in the `SwiftyLayoutsExample` folder.
+
 ## Contributing
 
 See the [CONTRIBUTING] document.
@@ -107,7 +109,7 @@ Thank you, [contributors]!
 
 ## FAQ
 
-###  How can I add Global header to Layout?
+####  How can I add Global header to Layout?
 
 
 ## License
