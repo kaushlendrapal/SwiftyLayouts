@@ -1,10 +1,8 @@
-![Build Status](https://travis-ci.org/Alamofire/Alamofire.svg?branch=master)
-![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Alamofire.svg)
-![Gitter](https://badges.gitter.im/Alamofire/Alamofire.svg)
+[![Build Status](https://travis-ci.org/Alamofire/Alamofire.svg?branch=master)](http://cocoapods.org/pods/SwiftyLayouts)
+[![CocoaPods Compatible](https://img.shields.io/badge/pod-v1.0.0-orange.svg)](http://cocoapods.org/pods/SwiftyLayouts)
+[![Join the chat at https://gitter.im/SwiftyLayouts/Lobby](https://badges.gitter.im/SwiftyLayouts/Lobby.svg)](https://gitter.im/SwiftyLayouts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # SwiftyLayouts
-
-[![Join the chat at https://gitter.im/SwiftyLayouts/Lobby](https://badges.gitter.im/SwiftyLayouts/Lobby.svg)](https://gitter.im/SwiftyLayouts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif) ![](docs/swiftyLayout_demo4.gif)
 
