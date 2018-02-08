@@ -29,6 +29,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupNavigationBarItems()
         setupCollectionViewLayout()
         setUpView()
         collectionView.reloadData()
@@ -37,7 +38,6 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        setupNavigationBarItems()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,9 +60,7 @@ class CardViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func setupNavigationBarItems() -> Void {
-//        self.title = "Swifty Layouts"
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
