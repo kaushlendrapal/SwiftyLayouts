@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftyLayouts"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "SwiftyLayouts-Debug. library for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
    s.resources = "Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-    s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/guide"
+    s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
