@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
    s.resources = "Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
+    s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/guide"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
