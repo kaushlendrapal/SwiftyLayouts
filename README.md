@@ -4,6 +4,8 @@
 
 # SwiftyLayouts
 
+[![Join the chat at https://gitter.im/SwiftyLayouts/Lobby](https://badges.gitter.im/SwiftyLayouts/Lobby.svg)](https://gitter.im/SwiftyLayouts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif) ![](docs/swiftyLayout_demo4.gif)
 
 ---
