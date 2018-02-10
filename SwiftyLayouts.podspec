@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftyLayouts"
-  s.version      = "1.0.1"
-  s.summary      = "SwiftyLayouts-Debug. library for iOS"
+  s.version      = "1.0.2"
+  s.summary      = "SwiftyLayouts library used to provide delight collection view layouts"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                 A short description of my first framwork with description done.
                    DESC
 
-  s.homepage     = "https://github.com/kaushlendrapal/SwiftyLayouts"
+  s.homepage     = "https://kaushlendrapal.github.io/SwiftyLayouts/"
   # s.screenshots  = "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo1.gif", "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo3.gif"
 
 
@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
    s.resources = "Resources/*.{png,jpg}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-    s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/"
+  # s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
