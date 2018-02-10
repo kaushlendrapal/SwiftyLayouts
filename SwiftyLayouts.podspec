@@ -25,7 +25,9 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                A short description of my first framwork with description done.
+                SwiftyLayouts library used to provide delight collection view layouts.
+                library having multiple submodule, You can consume specific layout module as
+                per layout needed.
                    DESC
 
   s.homepage     = "https://kaushlendrapal.github.io/SwiftyLayouts/"
@@ -131,7 +133,8 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
+  s.swift_version = '4.0.3'
   # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
