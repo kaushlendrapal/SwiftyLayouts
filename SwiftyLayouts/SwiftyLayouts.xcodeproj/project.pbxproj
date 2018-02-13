@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		E119D33D2033149100A095BD /* swiftyLayouts_universal_fat.sh in Resources */ = {isa = PBXBuildFile; fileRef = E119D33C2033149100A095BD /* swiftyLayouts_universal_fat.sh */; };
 		E1415CE5200F617100651407 /* SwiftyLayouts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1415CDB200F617100651407 /* SwiftyLayouts.framework */; };
 		E1415CEA200F617100651407 /* SwiftyLayoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1415CE9200F617100651407 /* SwiftyLayoutsTests.swift */; };
 		E1415CEC200F617100651407 /* SwiftyLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = E1415CDE200F617100651407 /* SwiftyLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E119D33C2033149100A095BD /* swiftyLayouts_universal_fat.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = swiftyLayouts_universal_fat.sh; path = "Build-Phases/swiftyLayouts_universal_fat.sh"; sourceTree = "<group>"; };
 		E1415CDB200F617100651407 /* SwiftyLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyLayouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1415CDE200F617100651407 /* SwiftyLayouts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyLayouts.h; sourceTree = "<group>"; };
 		E1415CDF200F617100651407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		E1415CD1200F617100651407 = {
 			isa = PBXGroup;
 			children = (
+				E119D33C2033149100A095BD /* swiftyLayouts_universal_fat.sh */,
 				E1415CDD200F617100651407 /* SwiftyLayouts */,
 				E1415CE8200F617100651407 /* SwiftyLayoutsTests */,
 				E1415CDC200F617100651407 /* Products */,
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E119D33D2033149100A095BD /* swiftyLayouts_universal_fat.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,13 +243,14 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Build-Phases/swiftyLayouts_universal_fat.sh",
 			);
 			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\n# Adapted from http://stackoverflow.com/questions/24039470/xcode-6-ios-creating-a-cocoa-touch-framework-architectures-issues/26691080#26691080\n# and https://gist.github.com/cromandini/1a9c4aeab27ca84f5d79\n\n# Create a new aggregate target.\n# For the automatically generated scheme, change its build config to \"release\".\n# Ensure this target's \"product name\" build setting matches the framework's.\n# Add a run script with `source \"${PROJECT_DIR}/path_to_this_script`\n\nUNIVERSAL_OUTPUT_DIR=${BUILD_DIR}/${CONFIGURATION}-universal\nRELEASE_DIR=${PROJECT_DIR}/Products/${CONFIGURATION}-universal\n\n# Remove universal folder and its directory if exist\nrm -rf \"${UNIVERSAL_OUTPUTFOLDER}\"\nrm -rf \"${RELEASE_DIR}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUT_DIR}\"\nmkdir -p \"${RELEASE_DIR}\"\n\n# Step 1. Build Device and Simulator versions\necho \"=== Building for iPhone device ===\"\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\necho \"=== Building for iPhoneSimulator ===\"\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -arch x86_64 -destination 'platform=iOS Simulator,name=iPhone 8' BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUT_DIR}/\"\n\n# Step 5. Copy the dSYM structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework.dSYM\" \"${UNIVERSAL_OUTPUT_DIR}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUT_DIR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\necho \"=== Combining executables ===\"\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n\n# Step 7. Remove existing builds\n#rm -rf \"${RELEASE_DIR}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\necho \"===Copying to project dir ===\"\ncp -R \"${UNIVERSAL_OUTPUT_DIR}/${PROJECT_NAME}.framework\" \"${RELEASE_DIR}\"\ncp -R \"${UNIVERSAL_OUTPUT_DIR}/${PROJECT_NAME}.framework.dSYM\" \"${RELEASE_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${RELEASE_DIR}\"";
+			shellScript = "FILE=${SCRIPT_INPUT_FILE_0}\n`$FILE`\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
