@@ -1,8 +1,8 @@
 language: objective-c
-osx_image: xcode9.1
-xcode_project: SwiftyLayouts/SwiftyLayouts.xcodeproj
-xcode_scheme: SwiftyLayoutsTests
-xcode_sdk: iphonesimulator
+osx_image: xcode9.2
+#xcode_project: SwiftyLayouts/SwiftyLayouts.xcodeproj
+#xcode_scheme: SwiftyLayoutsTests
+#xcode_sdk: iphonesimulator
 
 branches:
 only:
@@ -15,17 +15,12 @@ global:
 - IOS_FRAMEWORK_SCHEME=SwiftyLayoutsTests
 
 matrix:
-- DESTINATION='OS=11.2,platform=iOS Simulator,name=iPhone 8'
+- DESTINATION=OS=11.2,platform=iOS Simulator,name=iPhone 8
 SCHEME="$IOS_FRAMEWORK_SCHEME"
 RUN_TESTS="YES"
 POD_LINT="NO"
 
 before_install:
-- gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
-script:
-- set -o pipefail
-- xcodebuild -version
-- xcodebuild -showsdks
 
 # Build Framework in Debug and Run Tests if specified
 - if [ $RUN_TESTS == "YES" ]; then
