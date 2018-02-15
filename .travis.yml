@@ -1,3 +1,4 @@
+os: osx
 language: objective-c
 osx_image: xcode9.2
 xcode_project: SwiftyLayouts/SwiftyLayouts.xcodeproj
