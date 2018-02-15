@@ -10,7 +10,7 @@ project ‘SwiftyLayoutsExample’, {
 
 def applibs
 
-#pod ‘SwiftyLayouts', :configuration => ['Debug'], :path  => '../SwiftyLayouts/SwiftyLayouts.podspec'
+# pod ‘SwiftyLayouts-Debug', :configuration => ['Debug'], :path  => '${PROJECT_DIR}/../Frameworks/${CONFIGURATION}-universal/SwiftyLayouts-Debug.podspec'
 # pod 'SwiftyLayouts', :configuration => ['Debug'], :path  => '../Frameworks/SwiftyLayouts/SwiftyLayouts.podspec'
 
 end
@@ -23,8 +23,7 @@ target 'SwiftyLayoutsExample' do
     workspace 'SwiftyLayoutsExample.xcworkspace'
     project 'SwiftyLayoutsExample.xcodeproj'
     applibs
-    pod 'SwiftyLayouts', '~> 1.0.1'
-  # Pods for SwiftyLayoutsExample
+    pod 'SwiftyLayouts', '~> 1.0.2'
 
   target 'SwiftyLayoutsExampleTests' do
     inherit! :search_paths

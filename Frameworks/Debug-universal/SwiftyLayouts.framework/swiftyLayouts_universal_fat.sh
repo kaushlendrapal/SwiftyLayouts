@@ -8,7 +8,8 @@
 
 UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal
 
-RELEASE_DIR=${PROJECT_DIR}/Products/${CONFIGURATION}-universal
+#RELEASE_DIR=${PROJECT_DIR}/Products/${CONFIGURATION}-universal
+RELEASE_DIR=${PROJECT_DIR}/../Frameworks/${CONFIGURATION}-universal
 
 # clear the old cache i universal framework
 rm -rf "${UNIVERSAL_OUTPUTFOLDER}"
