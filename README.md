@@ -4,7 +4,7 @@
 
 # SwiftyLayouts
 
-![](https://github.com/kaushlendrapal/SwiftyLayouts/docs/swiftyLayout_demo1.gif)        ![](https://github.com/kaushlendrapal/SwiftyLayouts/docs/swiftyLayout_demo2.gif)        ![](https://github.com/kaushlendrapal/SwiftyLayouts/docs/swiftyLayout_demo3.gif) ![](https://github.com/kaushlendrapal/SwiftyLayouts/docs/swiftyLayout_demo4.gif)
+![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif) ![](docs/swiftyLayout_demo4.gif)
 
 ---
 
@@ -123,7 +123,7 @@ It contains free software that may be redistributed under MIT license [LICENSE] 
 
 ## About
 
-![SwiftyLayouts ](https://github.com/kaushlendrapal/SwiftyLayouts/Resources/swiftylayouts_v1.png)
+![SwiftyLayouts ](Resources/swiftylayouts_v1.png)
 
 library used to provide delight collection view layouts.
 
