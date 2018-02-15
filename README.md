@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/Alamofire/Alamofire.svg?branch=master)](http://cocoapods.org/pods/SwiftyLayouts)
+[![Build Status](https://travis-ci.org/kaushlendrapal/SwiftyLayouts.svg?branch=master)](https://travis-ci.org/kaushlendrapal/SwiftyLayouts)
 [![CocoaPods Compatible](https://img.shields.io/badge/pod-v1.0.0-orange.svg)](http://cocoapods.org/pods/SwiftyLayouts)
 [![Join the chat at https://gitter.im/SwiftyLayouts/Lobby](https://badges.gitter.im/SwiftyLayouts/Lobby.svg)](https://gitter.im/SwiftyLayouts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # SwiftyLayouts
 
-![](docs/swiftyLayout_demo1.gif)        ![](docs/swiftyLayout_demo2.gif)        ![](docs/swiftyLayout_demo3.gif) ![](docs/swiftyLayout_demo4.gif)
+![](https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo1.gif)        ![](https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo2.gif)        ![](https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo3.gif) ![](https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo4.gif)
 
 ---
 
@@ -90,7 +90,7 @@ $ git submodule add https://github.com/kaushlendrapal/SwiftyLayouts.git
 
 - Select the top `SwiftyLayouts.framework` for iOS.
 
-> You can verify which one you selected by inspecting the build log for your project. The build target for `SwiftyLayouts` will be listed as either `Alamofire iOS`
+> You can verify which one you selected by inspecting the build log for your project. The build target for `SwiftyLayouts` will be listed as either `SwiftyLayouts iOS`
 
 - And that's it!
 
@@ -123,7 +123,7 @@ It contains free software that may be redistributed under MIT license [LICENSE] 
 
 ## About
 
-![SwiftyLayouts ](/Resources/swiftylayouts_v1.png)
+![SwiftyLayouts ](https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/Resources/swiftylayouts_v1.png)
 
 library used to provide delight collection view layouts.
 
