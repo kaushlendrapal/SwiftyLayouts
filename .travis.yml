@@ -10,4 +10,5 @@ only:
 - master
 
 script:
-- xcodebuild clean build -project test SwiftyLayouts/SwiftyLayouts.xcodeproj -scheme SwiftyLayoutsTests -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES
+- xcodebuild test -project SwiftyLayouts/SwiftyLayouts.xcodeproj -scheme SwiftyLayoutsTests -destination 'platform=iOS Simulator,name=iPhone 8' -configuration Debug -sdk iphonesimulator11.2 ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES | tee >build.log >(xcpretty -s)
+
