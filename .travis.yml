@@ -1,8 +1,9 @@
+os: osx
 language: objective-c
 osx_image: xcode9.2
 #xcode_project: SwiftyLayouts/SwiftyLayouts.xcodeproj
 #xcode_scheme: SwiftyLayoutsTests
-#xcode_sdk: iphonesimulator
+#xcode_sdk: iphonesimulator11.2
 
 branches:
 only:
@@ -21,6 +22,12 @@ RUN_TESTS="YES"
 POD_LINT="NO"
 
 before_install:
+- rvm install ruby-2.2.2
+- gem install xcpretty -N
+script:
+- set -o pipefail
+- xcodebuild -version
+- xcodebuild -showsdks
 
 # Build Framework in Debug and Run Tests if specified
 - if [ $RUN_TESTS == "YES" ]; then
