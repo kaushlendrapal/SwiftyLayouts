@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftyLayouts"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "SwiftyLayouts library used to provide delight collection view layouts"
 
   # This description is used to generate tags and improve search results.
@@ -31,8 +31,6 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://kaushlendrapal.github.io/SwiftyLayouts/"
-  # s.screenshots  = "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo1.gif", "https://github.com/kaushlendrapal/SwiftyLayouts/tree/master/docs/swiftyLayout_demo3.gif"
-
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -56,9 +54,7 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "ideveloperlab" => "kaushlendra pal" }
-  # Or just: s.author    = ""
-  # s.authors            = { "" => "" }
-   s.social_media_url   = "https://ideveloperlab.wordpress.com/"
+  s.social_media_url   = "https://ideveloperlab.wordpress.com/"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -70,7 +66,7 @@ Pod::Spec.new do |s|
    s.platform     = :ios, "10.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+   s.ios.deployment_target = "10.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -82,8 +78,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kaushlendrapal/SwiftyLayouts.git", :tag => "#{s.version}" }
-# s.source       = { :path => ".", :tag => "#{s.version}" }
+  s.source        = {:git => "https://github.com/kaushlendrapal/SwiftyLayouts.git", :tag => "#{s.version}" }
+  s.source_files  = 'SwiftyLayouts/SwiftyLayouts'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -92,13 +88,7 @@ Pod::Spec.new do |s|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
     s.source_files  = "SwiftyLayouts", "SwiftyLayouts/SwiftyLayouts/*.swift"
-  # s.source_files  = "SwiftyLayouts", "Frameworks/Debug/SwiftyLayouts.framework/**/*.{h,m,swift}"
-  # s.exclude_files = "Classes/Exclude"
-
-  # s.public_header_files = "SwiftyLayouts/**/*.h"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -108,11 +98,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # s.resource  = "icon.png"
    s.resources = "Resources/*.{png,jpg}"
-
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-  # s.documentation_url = "https://kaushlendrapal.github.io/SwiftyLayouts/"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -122,9 +108,6 @@ Pod::Spec.new do |s|
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
-
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -138,6 +121,5 @@ Pod::Spec.new do |s|
   # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0.3' }
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
 
 end
