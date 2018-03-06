@@ -42,19 +42,19 @@ public extension UICollectionViewDataSource {
 
 public class CardViewLayout: UICollectionViewLayout {
     
-    private var registeredDecorationClasses:[String : AnyClass] = [:]
-    private var itemLayoutAttributeCache        =       [IndexPath : UICollectionViewLayoutAttributes]()
-    private var decorationLayoutAttributeCache  =       [IndexPath : UICollectionViewLayoutAttributes]()
-    private var headerLayoutAttributeCache      =       [IndexPath : UICollectionViewLayoutAttributes]()
-    private var footerLayoutAttributeCache      =       [IndexPath : UICollectionViewLayoutAttributes]()
-    private var globalHeaderAttributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
-    private var globalFooterAttributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
+    public var registeredDecorationClasses:[String : AnyClass] = [:]
+    public var itemLayoutAttributeCache        =       [IndexPath : UICollectionViewLayoutAttributes]()
+    public var decorationLayoutAttributeCache  =       [IndexPath : UICollectionViewLayoutAttributes]()
+    public var headerLayoutAttributeCache      =       [IndexPath : UICollectionViewLayoutAttributes]()
+    public var footerLayoutAttributeCache      =       [IndexPath : UICollectionViewLayoutAttributes]()
+    public var globalHeaderAttributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
+    public var globalFooterAttributes:UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
 
-    private var collectionViewContentHeight: CGFloat = 0
+    public var collectionViewContentHeight: CGFloat = 0
     public var layoutSetting = LayoutSetting()
     public weak var delegate: LayoutDelegate!
 
-    private var collectionViewContentWidth: CGFloat {
+    public var collectionViewContentWidth: CGFloat {
         guard let collectionView = collectionView else {
             return 0
         }
@@ -66,7 +66,7 @@ public class CardViewLayout: UICollectionViewLayout {
         return CGSize(width: collectionViewContentWidth, height: collectionViewContentHeight)
     }
     
-    private var cellWidth: CGFloat {
+    public var cellWidth: CGFloat {
         guard let collectionView = collectionView else {
             return 0
         }
@@ -160,10 +160,10 @@ extension CardViewLayout {
     }
 }
 
-//MARK: - Private Methods
-private extension CardViewLayout {
+//MARK: - public Methods
+public extension CardViewLayout {
         
-    private func prepareLayoutAttributesCache() {
+    public func prepareLayoutAttributesCache() {
         // method to prepare cache.
         guard let collectionView = collectionView,
             itemLayoutAttributeCache.isEmpty else {
@@ -207,7 +207,7 @@ private extension CardViewLayout {
         }
     }
     
-    private func createItemAttribute(forCellWith cellIndexPath:IndexPath) -> (UICollectionViewLayoutAttributes) {
+    public func createItemAttribute(forCellWith cellIndexPath:IndexPath) -> (UICollectionViewLayoutAttributes) {
         let attribute = UICollectionViewLayoutAttributes(forCellWith: cellIndexPath)
         let cellHeight: CGFloat = delegate.collectionView(self.collectionView!, heightForCellAtIndexPath: cellIndexPath)
         let itemMinY:CGFloat = collectionViewContentHeight + layoutSetting.cellMargin.top
@@ -225,7 +225,7 @@ private extension CardViewLayout {
        return attribute
     }
     
-    private func createSuplementryAttribute(ofKind kind:String, cellIndexPath:IndexPath) -> (UICollectionViewLayoutAttributes) {
+    public func createSuplementryAttribute(ofKind kind:String, cellIndexPath:IndexPath) -> (UICollectionViewLayoutAttributes) {
     
         let attribute = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind:kind, with:cellIndexPath)
         
@@ -262,11 +262,11 @@ private extension CardViewLayout {
     }
 
     
-    private func updateCells(_ attributes: UICollectionViewLayoutAttributes, halfHeight: CGFloat, halfCellHeight: CGFloat) {
+    public func updateCells(_ attributes: UICollectionViewLayoutAttributes, halfHeight: CGFloat, halfCellHeight: CGFloat) {
         
     }
     
-    private func updateSupplementaryViews(attributes: UICollectionViewLayoutAttributes, collectionView: UICollectionView, indexPath: IndexPath) {
+    public func updateSupplementaryViews(attributes: UICollectionViewLayoutAttributes, collectionView: UICollectionView, indexPath: IndexPath) {
         
         var cellHeight: CGFloat = delegate.collectionView(self.collectionView!, ofSuplementryViewKind:attributes.representedElementKind!, heightAtIndexPath: indexPath)
         var offset = collectionView.contentOffset.y + collectionView.contentInset.top
@@ -348,7 +348,7 @@ private extension CardViewLayout {
         return sectionRect
     } */
     
-    private func isGlobalHeaderProvided () -> (Bool) {
+    public func isGlobalHeaderProvided () -> (Bool) {
         var isHeader:Bool = false
         let height = delegate.collectionView(self.collectionView!, ofSuplementryViewKind:UICollectionElementKindSectionHeader, heightAtIndexPath: IndexPath(index:0))
         if height > CGFloat.leastNormalMagnitude {
@@ -358,7 +358,7 @@ private extension CardViewLayout {
         return isHeader
     }
     
-    private func isGlobalFooterProvided () -> (Bool) {
+    public func isGlobalFooterProvided () -> (Bool) {
         var isFooter:Bool = false
         let height = delegate.collectionView(self.collectionView!, ofSuplementryViewKind:UICollectionElementKindSectionFooter, heightAtIndexPath: IndexPath(index:0))
         if height > CGFloat.leastNormalMagnitude {

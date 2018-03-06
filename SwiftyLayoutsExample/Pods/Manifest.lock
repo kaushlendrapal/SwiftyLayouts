@@ -1,12 +1,12 @@
 PODS:
-  - SwiftyLayouts (1.0.0)
+  - SwiftyLayouts (1.1.0)
 
 DEPENDENCIES:
-  - SwiftyLayouts (~> 1.0.0)
+  - SwiftyLayouts (~> 1.1.0)
 
 SPEC CHECKSUMS:
-  SwiftyLayouts: 3af3431e71a96bdcd0c14d2486b4cf098fecd137
+  SwiftyLayouts: f6d2f87fb92c660160c7fdd1d204e83d75f7ef58
 
-PODFILE CHECKSUM: 2fe9449c9ec093d670d96a4596e3b9fa4ac92e59
+PODFILE CHECKSUM: 9c367e6da3a6626c7fe72be995d5b7aab2aada3d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.3.1
